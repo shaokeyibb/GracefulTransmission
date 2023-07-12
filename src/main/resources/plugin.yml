@@ -1,0 +1,7 @@
+name: GracefulTransmission
+version: '${version}'
+main: io.hikarilan.gracefultransmission.GracefulTransmission
+api-version: '1.20'
+depend: [ProtocolLib]
+authors: [HikariLan]
+description: Provide amazing teleporting animation same as the GTA Online game
