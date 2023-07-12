@@ -1,0 +1,11 @@
+# Durations in ticks
+general:
+  up-duration: 40
+  fade-in-duration: 20
+  stay-duration: 20
+  fade-out-duration: 40
+  down-duration: 40
+  down-stay-duration: 20
+  up-offset: 100.0
+  modify-weather: true
+  day-cycle: 1
