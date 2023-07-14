@@ -10,10 +10,11 @@ Provide amazing teleporting animation same as the GTA Online game.
 - [x] Fully customizable
 
 ## How to use
-1. Download the latest release of the plugin.
-2. Put the plugin into your `plugins` folder.
-3. Restart your server.
-4. Enjoy!
+1. Install ProtocolLib plugin.
+2. Download the latest release of the plugin.
+3. Put the plugin into your `plugins` folder.
+4. Restart your server.
+5. Enjoy!
 
 ## Configuration
 ```yaml
