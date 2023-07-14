@@ -49,6 +49,7 @@ public final class GracefulTransmission extends JavaPlugin {
 
     @Override
     public void onLoad() {
+        new Metrics(this, 19089);
         this.protocolManager = ProtocolLibrary.getProtocolManager();
     }
 
