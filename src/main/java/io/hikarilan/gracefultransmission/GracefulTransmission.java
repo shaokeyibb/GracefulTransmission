@@ -2,6 +2,7 @@ package io.hikarilan.gracefultransmission;
 
 import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.ProtocolManager;
+import com.comphenix.protocol.utility.MinecraftVersion;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -15,6 +16,9 @@ public final class GracefulTransmission extends JavaPlugin {
 
     @Getter
     private FileConfiguration configuration;
+
+    @Getter
+    private MinecraftVersion minecraftVersion;
 
     @Getter
     private int upDuration;
@@ -51,6 +55,8 @@ public final class GracefulTransmission extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        this.minecraftVersion = protocolManager.getMinecraftVersion();
+
         saveDefaultConfig();
         reloadConfiguration();
         Bukkit.getPluginManager().registerEvents(new EventListener(this), this);

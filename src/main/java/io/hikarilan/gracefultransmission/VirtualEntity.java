@@ -40,12 +40,17 @@ public class VirtualEntity {
 
     @SneakyThrows
     private void spawn() {
-        val packet = protocolManager.createPacket(PacketType.Play.Server.SPAWN_ENTITY_LIVING);
+        val isAbove18 = plugin.getMinecraftVersion().getMinor() > 18;
+
+        val packet = isAbove18
+                ? protocolManager.createPacket(PacketType.Play.Server.SPAWN_ENTITY)
+                : protocolManager.createPacket(PacketType.Play.Server.SPAWN_ENTITY_LIVING);
+
         packet.getModifier().writeDefaults();
 
         packet.getIntegers().write(0, entityID);
         packet.getUUIDs().write(0, UUID.randomUUID());
-        packet.getIntegers().write(1, 1 /*Armor Stand*/);
+        packet.getIntegers().write(1, isAbove18 ? 2 : 1 /*Armor Stand*/);
 
         packet.getDoubles()
                 .write(0, location.getX())
