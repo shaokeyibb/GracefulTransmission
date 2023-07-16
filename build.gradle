@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'io.hikarilan'
-version = '1.1.1-SNAPSHOT'
+version = '1.1.2-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -33,7 +33,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.28'
 }
 
-def targetJavaVersion = 17
+def targetJavaVersion = 8
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
